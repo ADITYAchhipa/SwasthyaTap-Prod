@@ -105,9 +105,11 @@ function AboutContent() {
               rel="noopener noreferrer" 
               className="inline-block group"
             >
-              <div className="w-16 h-16 rounded-full bg-success/10 text-success flex items-center justify-center mx-auto mb-4 font-bold text-xl group-hover:scale-105 transition-transform">
-                HB
-              </div>
+              <img 
+                src="/harshit-borana.jpg" 
+                alt="Harshit Borana" 
+                className="w-16 h-16 rounded-full object-cover mx-auto mb-4 border-2 border-success/20 group-hover:scale-105 group-hover:border-success transition-all shadow-sm"
+              />
               <h3 className="font-extrabold text-secondary text-lg group-hover:text-success transition-colors inline-flex items-center gap-1.5 justify-center">
                 Harshit Borana
                 <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-success" />

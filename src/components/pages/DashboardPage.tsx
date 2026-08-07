@@ -27,8 +27,9 @@ function DashboardContent() {
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <a href="/" className="text-xl font-bold text-primary">SwasthyaTap</a>
-          <div className="flex items-center gap-4">
-            <span className="text-sm text-secondary">Harshit Borana</span>
+          <div className="flex items-center gap-3">
+            <img src="/harshit-borana.jpg" alt="Harshit Borana" className="w-8 h-8 rounded-full object-cover border border-secondary/10" />
+            <span className="text-sm font-medium text-secondary">Harshit Borana</span>
             <button className="text-secondary/60 hover:text-primary"><LogOut size={20} /></button>
           </div>
         </div>

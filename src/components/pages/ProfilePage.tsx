@@ -5,7 +5,7 @@ import { AlertTriangle, Phone, Shield, Droplets, Pill } from 'lucide-react';
 // Mock data - in production this would come from Supabase
 const mockProfile = {
   name: 'Harshit Borana',
-  photo: null,
+  photo: '/harshit-borana.jpg',
   bloodGroup: 'B+',
   allergies: ['Penicillin', 'Dust'],
   medications: ['None'],
@@ -39,9 +39,17 @@ function ProfileContent({ uid }: { uid?: string }) {
       >
         {/* Header */}
         <div className="bg-white rounded-t-card p-6 text-center border-b">
-          <div className="w-20 h-20 bg-primary/10 rounded-full mx-auto flex items-center justify-center mb-3">
-            <span className="text-3xl font-bold text-primary">{mockProfile.name[0]}</span>
-          </div>
+          {mockProfile.photo ? (
+            <img
+              src={mockProfile.photo}
+              alt={mockProfile.name}
+              className="w-20 h-20 rounded-full object-cover mx-auto mb-3 border-2 border-primary/20 shadow-sm"
+            />
+          ) : (
+            <div className="w-20 h-20 bg-primary/10 rounded-full mx-auto flex items-center justify-center mb-3">
+              <span className="text-3xl font-bold text-primary">{mockProfile.name[0]}</span>
+            </div>
+          )}
           <h1 className="text-xl font-bold text-secondary">{mockProfile.name}</h1>
           <p className="text-sm text-secondary/60">SwasthyaTap Health ID {uid ? `(${uid})` : ''}</p>
         </div>
