@@ -1,4 +1,4 @@
-import { Activity, Shield, Users, Heart, ArrowLeft } from 'lucide-react';
+import { Activity, Shield, Users, Heart, ArrowLeft, ExternalLink } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageProvider';
@@ -99,11 +99,21 @@ function AboutContent() {
           </div>
 
           <div className="bg-white p-6 rounded-2xl border border-secondary/5 shadow-sm text-center">
-            <div className="w-16 h-16 rounded-full bg-success/10 text-success flex items-center justify-center mx-auto mb-4 font-bold text-xl">
-              HB
-            </div>
-            <h3 className="font-extrabold text-secondary text-lg">Harshit Borana</h3>
-            <p className="text-sm text-success font-semibold mb-2">{t('about.founder2Role')}</p>
+            <a 
+              href="https://harshitborana.cloud" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-block group"
+            >
+              <div className="w-16 h-16 rounded-full bg-success/10 text-success flex items-center justify-center mx-auto mb-4 font-bold text-xl group-hover:scale-105 transition-transform">
+                HB
+              </div>
+              <h3 className="font-extrabold text-secondary text-lg group-hover:text-success transition-colors inline-flex items-center gap-1.5 justify-center">
+                Harshit Borana
+                <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-success" />
+              </h3>
+            </a>
+            <p className="text-sm text-success font-semibold mb-2 mt-1">{t('about.founder2Role')}</p>
             <p className="text-xs text-secondary/70 leading-relaxed">
               {t('about.founder2Desc')}
             </p>
